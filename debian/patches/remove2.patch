@@ -1,0 +1,47 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ python-gevent (1.0.1-1) unstable; urgency=low
+ .
+   * New upstream release, fixes thread switch detection (closes: #694750).
+   * Fix sphinx build problem (closes: #700731).
+   * Tighten greenlet dependency (closes: #747283).
+   * Update Standards-Version to 3.9.6 .
+   * Sync with Ubuntu.
+ .
+   [ Matthias Klose <doko@ubuntu.com> ]
+   * Fix build failure with python2.7 and PEP 466 (closes: #764499).
+Author: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Bug-Debian: https://bugs.debian.org/694750
+Bug-Debian: https://bugs.debian.org/700731
+Bug-Debian: https://bugs.debian.org/747283
+Bug-Debian: https://bugs.debian.org/764499
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- python-gevent-1.0.1.orig/gevent/ssl.py
++++ python-gevent-1.0.1/gevent/ssl.py
+@@ -382,7 +382,7 @@ def wrap_socket(sock, keyfile=None, cert
+                      ciphers=ciphers)
+ 
+ 
+-def get_server_certificate(addr, ssl_version=PROTOCOL_SSLv3, ca_certs=None):
++def get_server_certificate(addr, ssl_version=PROTOCOL_SSLv23, ca_certs=None):
+     """Retrieve the certificate from the server at the specified address,
+     and return it as a PEM-encoded string.
+     If 'ca_certs' is specified, validate the server cert against it.

@@ -1,0 +1,12 @@
+This debian/ directory was extracted from
+https://launchpad.net/ubuntu/+source/python-gevent/1.1~b1-0ubuntu2.
+It was then added to a git clone from http://github.com/gevent/gevent.git
+in a debian branch.
+
+Changes from original source package:
+
+- Modified gbp.conf
+- Removed python3-greenlet-dbg build deb since it doesn't exist as a
+  .deb package (yet?)
+- Added cython, cython3 to Build-Depends
+- Uncommented override_dh_auto_test to skip running tests

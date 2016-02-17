@@ -1,0 +1,3 @@
+usr/lib/python2*/*-packages/gevent/*.py
+usr/lib/python2*/*-packages/gevent/*[!_][!d].so
+usr/lib/python2*/*-packages/*.egg-info

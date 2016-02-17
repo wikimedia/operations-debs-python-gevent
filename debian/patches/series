@@ -1,0 +1,8 @@
+#offline-doc-cross-reference
+#gevent-ipv6-dns-workaround.patch
+use-local-intersphinx-inventory.patch
+#fix-gcc-ftbfs.diff
+#sslwrap.py
+#remove.patch
+#remove2.patch
+#nossl3.patch
